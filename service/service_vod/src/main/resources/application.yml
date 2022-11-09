@@ -1,0 +1,25 @@
+#服务器的端口名字
+server:
+  port: 8003
+spring:
+#  服务名
+  application:
+    name: service-vod
+  profiles:
+    active: dev
+  #上传视频大小设置
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#阿里云vod使用
+aliyun:
+  vod:
+    file:
+      key_id: LTAI4G4WqUU8YZrNTDcT2zLm
+      key_secret: GWOuP8zCEDKTSv2SJFl2ih3P3lYv8M

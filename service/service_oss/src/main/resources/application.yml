@@ -1,0 +1,25 @@
+#服务端口
+server:
+  port: 8002
+
+#服务名
+#环境设置
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#阿里云 OSS
+#不同的服务器，地址不同
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-beijing.aliyuncs.com
+      key_id: LTAI4G4WqUU8YZrNTDcT2zLm
+      key_secret: GWOuP8zCEDKTSv2SJFl2ih3P3lYv8M
+      bucket_name: zzy-edu
+#bucket可以在控制台创建，也可以使用java代码创建
