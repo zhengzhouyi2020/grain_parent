@@ -5,6 +5,7 @@ import com.zzy.edu.entity.Chapter;
 import com.zzy.edu.entity.vo.ChapterVo;
 import com.zzy.edu.service.ChapterService;
 import com.zzy.utils.R;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ import java.util.List;
  * @since 2021-02-02
  */
 @RestController
+@Api(value = "章节管理",tags = "章节管理")
 @RequestMapping("/edu/chapter")
 public class ChapterController {
 
@@ -59,12 +61,8 @@ public class ChapterController {
         if(flag){
             return R.ok();
         }else{
-            return R.error();
+            return R.error("code不能为空!");
         }
     }
-
-
-
-
 }
 

@@ -1,6 +1,5 @@
 package com.zzy.utils;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -38,7 +37,7 @@ public class R {
         return result;
     }
 
-    public static R error(){
+    public static R error(String s){
         R result=new R();
         result.setCode(ResultCode.ERROR);
         result.setMessage("失败");

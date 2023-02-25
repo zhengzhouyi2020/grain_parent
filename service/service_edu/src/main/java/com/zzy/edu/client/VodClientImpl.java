@@ -14,11 +14,11 @@ import java.util.List;
 public class VodClientImpl implements VodClient {
     @Override
     public R deleteVideoById(String videoId) {
-        return R.error().message("删除视频失败");
+        return R.error("code不能为空!").message("删除视频失败");
     }
 
     @Override
     public R deleteBatch(List<String> videoList) {
-        return R.error().message("删除多个视频失败");
+        return R.error("code不能为空!").message("删除多个视频失败");
     }
 }

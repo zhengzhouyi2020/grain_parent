@@ -23,3 +23,6 @@ aliyun:
     file:
       key_id: LTAI4G4WqUU8YZrNTDcT2zLm
       key_secret: GWOuP8zCEDKTSv2SJFl2ih3P3lYv8M
+
+wx.open.app_id: 1234567
+

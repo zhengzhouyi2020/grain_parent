@@ -67,6 +67,8 @@ public class BannerAdminController {
 
         return R.ok().data("items", pageBanner.getRecords()).data("total", pageBanner.getTotal());
     }
+
+
 }
 
 

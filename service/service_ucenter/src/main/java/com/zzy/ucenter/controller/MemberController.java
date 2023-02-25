@@ -7,6 +7,7 @@ import com.zzy.ucenter.service.MemberService;
 import com.zzy.utils.JwtUtils;
 import com.zzy.utils.R;
 import com.zzy.utils.orderVo.UcenterMemberOrder;
+import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/ucenter/member")
+@Api(value = "UcenterMemberController", tags = "登录")
 public class MemberController {
     @Autowired
     private MemberService memberService;

@@ -3,6 +3,7 @@ package com.zzy.statistics.controller;
 
 import com.zzy.statistics.service.DailyService;
 import com.zzy.utils.R;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,15 +16,17 @@ import java.util.Map;
  *
  * @author zzy
  * @since 2021-02-26
+ *
  */
 @RestController
 @RequestMapping("/statistics/daily")
+@Api(value = "统计管理",tags = "统计管理")
 public class DailyController {
 
     @Autowired
     public DailyService dailyService;
 
-    @PostMapping("registerCount/{day}")
+    @PostMapping("/registerCount/{day}")
     public R registerCount(@PathVariable String day){
         dailyService.registerCount(day);
         return R.ok();

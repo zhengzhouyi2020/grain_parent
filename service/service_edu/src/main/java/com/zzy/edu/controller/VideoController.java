@@ -7,6 +7,7 @@ import com.zzy.edu.entity.Video;
 import com.zzy.edu.entity.vo.VideoVo;
 import com.zzy.edu.service.VideoService;
 import com.zzy.utils.R;
+import io.swagger.annotations.Api;
 import jdk.nashorn.internal.objects.Global;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/edu/video")
+@Api(value = "小节管理",tags = "小节管理")
 public class VideoController {
 
     @Autowired

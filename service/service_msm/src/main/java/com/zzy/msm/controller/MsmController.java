@@ -50,6 +50,6 @@ public class MsmController {
             redisTemplate.opsForValue().set(phone,code,5, TimeUnit.MINUTES);
             return R.ok();
         }
-        return R.error();
+        return R.error("code不能为空!");
     }
 }

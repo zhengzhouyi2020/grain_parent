@@ -1,6 +1,6 @@
 package com.zzy.order.service.impl;
 
-import com.zzy.order.service.EduClient;
+import com.zzy.order.client.EduClient;
 import com.zzy.utils.orderVo.CourseOrderVo;
 import org.springframework.stereotype.Component;
 

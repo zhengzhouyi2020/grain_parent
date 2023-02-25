@@ -1,6 +1,7 @@
 package com.zzy.edu.controller;
 
 import com.zzy.utils.R;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,13 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/edu/user")
+@Api(value = "登录管理", tags = "登录管理")
 public class LoginController {
 
     //login
     @PostMapping("/login")
     public R login(){
         return R.ok().data("token","admin");
-
     }
 
     //info

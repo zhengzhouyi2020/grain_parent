@@ -45,7 +45,7 @@ public class TeacherController {
     @ApiOperation("逻辑删除讲师")
     public R deleteTeacher(@ApiParam(name = "id", value = "讲师id", required = true) @PathVariable String id) {
         boolean flag = teacherService.removeById(id);
-        return flag ? R.ok() : R.error();
+        return flag ? R.ok() : R.error("code不能为空!");
     }
 
     @PostMapping("/teacherList")
@@ -81,7 +81,7 @@ public class TeacherController {
     @ApiOperation("添加讲师")
     public R addTeacher(@RequestBody Teacher teacher) {
         boolean save = teacherService.save(teacher);
-        return save ? R.ok() : R.error();
+        return save ? R.ok() : R.error("code不能为空!");
     }
 
     //根据id查询讲师
@@ -92,7 +92,7 @@ public class TeacherController {
         if (teacher != null) {
             return R.ok().data("teacher", teacher);
         }
-        return R.error();
+        return R.error("code不能为空!");
     }
 
     //修改讲师
@@ -100,7 +100,7 @@ public class TeacherController {
     @ApiOperation("更新讲师")
     public R updateTeacher(@RequestBody Teacher teacher) {
         boolean flag = teacherService.updateById(teacher);
-        return flag ? R.ok() : R.error();
+        return flag ? R.ok() : R.error("code不能为空!");
     }
 
 

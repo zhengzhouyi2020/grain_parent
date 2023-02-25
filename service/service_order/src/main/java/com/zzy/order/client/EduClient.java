@@ -1,4 +1,4 @@
-package com.zzy.order.service;
+package com.zzy.order.client;
 
 import com.zzy.order.service.impl.EduClientImpl;
 import com.zzy.utils.orderVo.CourseOrderVo;

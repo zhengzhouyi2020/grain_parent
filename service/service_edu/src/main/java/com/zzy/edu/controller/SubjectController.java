@@ -4,6 +4,7 @@ package com.zzy.edu.controller;
 import com.zzy.edu.entity.vo.OneSubject;
 import com.zzy.edu.service.SubjectService;
 import com.zzy.utils.R;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/edu/subject")
+@Api(value = "课程管理" ,tags = "课程管理")
 public class SubjectController {
 
     @Autowired

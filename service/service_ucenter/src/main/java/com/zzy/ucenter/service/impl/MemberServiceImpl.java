@@ -101,6 +101,15 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
         baseMapper.insert(member);
     }
 
+    //根据openid判断
+    @Override
+    public Member getOpenIdMember(String openid) {
+        QueryWrapper<Member> wrapper = new QueryWrapper<>();
+        wrapper.eq("openid",openid);
+        Member member = baseMapper.selectOne(wrapper);
+        return member;
+    }
+
     @Override
     public int countRegisterByDay(String day) {
         return baseMapper.selectRegisterCount(day);

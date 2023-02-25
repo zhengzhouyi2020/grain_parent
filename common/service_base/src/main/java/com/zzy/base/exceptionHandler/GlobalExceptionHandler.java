@@ -2,7 +2,6 @@ package com.zzy.base.exceptionHandler;
 
 import com.zzy.utils.R;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.logging.Log;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,7 +19,7 @@ public class GlobalExceptionHandler {
     @ResponseBody//为了返回数据
     public R error(Exception e){
         e.printStackTrace();
-        return R.error().message("执行全局异常处理！");
+        return R.error("code不能为空!").message("执行全局异常处理！");
     }
 
     @ExceptionHandler(GlobalException.class)
@@ -28,6 +27,6 @@ public class GlobalExceptionHandler {
     public R error(GlobalException e){
         e.printStackTrace();
         log .error(e.getMessage());  //错误日志输出到文件
-        return R.error().code(e.getCode()).message(e.getMsg());
+        return R.error("code不能为空!").code(e.getCode()).message(e.getMsg());
     }
 }

@@ -1,4 +1,4 @@
-package com.zzy.order.service;
+package com.zzy.order.client;
 
 import com.zzy.order.service.impl.UCenterClientImpl;
 import com.zzy.utils.orderVo.UcenterMemberOrder;

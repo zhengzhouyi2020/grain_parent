@@ -2,14 +2,15 @@ package com.zzy.order.service.impl;
 
 import com.zzy.order.entity.Order;
 import com.zzy.order.mapper.OrderMapper;
-import com.zzy.order.service.EduClient;
+import com.zzy.order.client.EduClient;
 import com.zzy.order.service.OrderService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zzy.order.service.UCenterClient;
+import com.zzy.order.client.UCenterClient;
 import com.zzy.order.utils.OrderNoUtil;
 import com.zzy.utils.orderVo.CourseOrderVo;
 import com.zzy.utils.orderVo.UcenterMemberOrder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -27,6 +28,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Autowired
     private EduClient eduClient;
 
+    @Qualifier("UCenterClient")
     @Autowired
     private UCenterClient uCenterClient;
 

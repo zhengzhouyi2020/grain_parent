@@ -1,6 +1,6 @@
 package com.zzy.order.service.impl;
 
-import com.zzy.order.service.UCenterClient;
+import com.zzy.order.client.UCenterClient;
 import com.zzy.utils.orderVo.UcenterMemberOrder;
 import org.springframework.stereotype.Component;
 

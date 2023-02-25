@@ -28,11 +28,20 @@ public class IndexFrontController {
     @Autowired
     private TeacherService teacherService;
     // 查询前面八条热门课程
-    @GetMapping("/index")
-    public R index(){
-        List<Course> courseList= courseService.getCourseList();
-        List<Teacher> teacherList= teacherService.getTeacherList();
-        return R.ok().data("teacherList",teacherList).data("courseList",courseList);
+    @GetMapping("index")
+    public R index() {
+        //查询前8条热门课程
+        QueryWrapper<Course> wrapper = new QueryWrapper<>();
+        wrapper.orderByDesc("id");
+        wrapper.last("limit 8");
+        List<Course> eduList = courseService.list(wrapper);
+
+        //查询前4条名师
+        QueryWrapper<Teacher> wrapperTeacher = new QueryWrapper<>();
+        wrapperTeacher.orderByDesc("id");
+        wrapperTeacher.last("limit 4");
+        List<Teacher> teacherList = teacherService.list(wrapperTeacher);
+
+        return R.ok().data("eduList",eduList).data("teacherList",teacherList);
     }
-    // 查询前面四条名师数据
 }

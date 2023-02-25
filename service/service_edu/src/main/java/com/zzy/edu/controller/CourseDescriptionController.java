@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/edu/course-description")
 public class CourseDescriptionController {
+    // TODO
 
 }
 

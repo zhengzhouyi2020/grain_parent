@@ -10,6 +10,7 @@ import com.zzy.edu.service.ChapterService;
 import com.zzy.edu.service.CourseService;
 import com.zzy.utils.R;
 import com.zzy.utils.orderVo.CourseOrderVo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import java.util.Map;
  * @Date 2021/2/11
  */
 @RestController
+@Api(value = "前端课程",tags = "前端课程")
 @RequestMapping("/edu/courseFront")
 public class CourseFrontController {
 
